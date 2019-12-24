@@ -39,9 +39,12 @@ namespace PenoApp.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task<ActionResult<Student>> Post([FromBody]Student student)
         {
+            _context.Students.Add(student);
+            await _context.SaveChangesAsync();
 
+            return CreatedAtAction("Get", new { id = student.Id }, student);
         }
 
         // PUT api/<controller>/5
