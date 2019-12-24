@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PenoApp.Data;
 
 namespace PenoApp.Migrations
 {
     [DbContext(typeof(PenoContext))]
-    partial class PenoContextModelSnapshot : ModelSnapshot
+    [Migration("20191224143934_pass-added")]
+    partial class passadded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,8 +29,6 @@ namespace PenoApp.Migrations
                     b.Property<string>("LastName");
 
                     b.Property<string>("Name");
-
-                    b.Property<int>("No");
 
                     b.Property<string>("Password");
 

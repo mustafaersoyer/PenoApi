@@ -12,29 +12,33 @@ using PenoApp.Models;
 namespace PenoApp.Controllers
 {
     [Route("api/[controller]")]
-    public class StudentController : Controller
+    public class StudentController : ControllerBase
     {
         PenoContext _context = new PenoContext();
         // GET: api/<controller>
+      
+
         [HttpGet]
-        public string Get()
+        public async Task<ActionResult<IEnumerable<Student>>> Get()
         {
-            return "asd";
+            return await _context.Students.ToListAsync();
         }
 
         // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public IEnumerable<Lecture> Get(int id)
+        [HttpGet("login")]
+        public async Task<ActionResult<Student>> Get(int no,string pass)
         {
-            using (var context =new PenoContext())
+            var student = _context.Students
+            .Single(c => c.No == no & c.Password == pass);
+
+            if (student == null)
             {
-                var query = (from lec in context.Lectures
-                             join las in context.LecAndStudents
-                             on lec.Id equals las.LectureId
-                             where las.StudentId == id
-                             select lec).ToList();
-                 return query;
+
+                return NoContent();
             }
+          
+            return student;
+            
         }
 
         // POST api/<controller>
