@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PenoApp.Data;
 using PenoApp.Models;
+using System.IO;
+using System.Net;
+using System.Text;
 
 namespace PenoApp.Controllers
 {
@@ -36,6 +39,42 @@ namespace PenoApp.Controllers
 
             return aca;
         }
+
+        // GET api/<controller>/login?no=asdsa&pass=asd
+        [HttpGet("login")]
+        public async Task<ActionResult<Aca>> Get(int no, string pass)
+        {
+            var aca = _context.Acas
+            .SingleOrDefault(c => c.No == no & c.Password == pass);
+
+            if (aca == null)
+            {
+                return NotFound();
+            }
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            return aca;
+
+        }
+
 
         // PUT: api/Acas/5
         [HttpPut("{id}")]
