@@ -25,11 +25,13 @@ namespace PenoApp.Controllers
 
         // GET: api/Notices/5
         [HttpGet("{id}")]
-        public List<Notice> GetNotice(int id)
+        public List<Notice> GetNotice(int id)//LectureID
         {
             //var notice = await _context.Notices.FindAsync(id);
             var customers = _context.Notices
-        .Where(c => c.LectureId == id).ToList();
+                            .Where(c => c.LectureId == id).ToList();
+            /*var lecturename = _context.Lectures.Select(l=>l.Name).Where(i => i.Id == id).ToList();
+            customers += lecturename;*/
 
             /*if (customers == null)
             {

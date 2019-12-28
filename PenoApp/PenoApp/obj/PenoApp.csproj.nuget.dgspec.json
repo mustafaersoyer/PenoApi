@@ -61,6 +61,26 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.2.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc5, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.0.0-rc5, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.0.0-rc5, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUi": {
+              "target": "Package",
+              "version": "[5.0.0-rc5, )"
+            },
+            "Swashbuckle.Core": {
+              "target": "Package",
+              "version": "[4.0.0-beta, )"
             }
           },
           "imports": [
