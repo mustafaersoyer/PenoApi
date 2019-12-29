@@ -39,14 +39,6 @@ namespace PenoApp.Controllers
 
                 return NotFound();
             }
-
-
-
-
-
-
-
-
             var request = WebRequest.Create("https://onesignal.com/api/v1/notifications") as HttpWebRequest;
 
             request.KeepAlive = true;
@@ -84,22 +76,6 @@ namespace PenoApp.Controllers
             }
 
             System.Diagnostics.Debug.WriteLine(responseContent);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             return student;
             
         }
@@ -126,6 +102,7 @@ namespace PenoApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+
         }
     }
 }

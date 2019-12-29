@@ -40,7 +40,7 @@ namespace PenoApp.Controllers
 
         // GET: api/Lectures/GetLectureByStudentId/5
         [HttpGet("{id}")]
-        public IEnumerable<Lecture> GetLectureByStudentId(int id) //Student id
+        public IEnumerable<Lecture> GetNotAndLecByStudentId(int id) //Student id
         {
             using (var context = new PenoContext())
             {
@@ -48,7 +48,8 @@ namespace PenoApp.Controllers
                              join las in context.LecAndStudents
                              on lec.Id equals las.LectureId
                              where las.StudentId == id
-                             select lec).ToList();
+                             select lec).Include(q=>q.Notices)
+                             .ToList();
                 return query;
             }
         }
@@ -122,6 +123,18 @@ namespace PenoApp.Controllers
             await _context.SaveChangesAsync();
 
             return lecture;
+        }
+        public IEnumerable<Lecture> GetNoticeswithLectureName() //Student id
+        {
+            using (var context = new PenoContext())
+            {
+                var query = context.Lectures
+                    .Include(q => q.Notices)
+                    .ToList()
+                    ;
+
+                return query;
+            }
         }
 
         private bool LectureExists(int id)
