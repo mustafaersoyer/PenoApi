@@ -26,3 +26,12 @@ C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\
 C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.dll
 C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.pdb
 C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.csprojAssemblyReference.cache
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\bin\Debug\netcoreapp2.2\PenoApp.Views.dll
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\bin\Debug\netcoreapp2.2\PenoApp.Views.pdb
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.TagHelpers.input.cache
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.TagHelpers.output.cache
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.RazorCoreGenerate.cache
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\Razor\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.RazorTargetAssemblyInfo.cs
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.Views.pdb
+C:\Users\musta\Documents\GitHub\PenoApi\PenoApp\PenoApp\obj\Debug\netcoreapp2.2\PenoApp.csproj.CopyComplete

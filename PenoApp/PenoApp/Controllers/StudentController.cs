@@ -14,7 +14,7 @@ using System.Text;
 
 namespace PenoApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class StudentController : ControllerBase
     {
         PenoContext _context = new PenoContext();
@@ -28,54 +28,19 @@ namespace PenoApp.Controllers
         }
 
         // GET api/<controller>/5
-        [HttpGet("login")]
-        public async Task<ActionResult<Student>> Get(int no,string pass)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Student>>> StLogin(int no,string pass)
         {
             var student = _context.Students
-            .SingleOrDefault(c => c.No == no & c.Password == pass);
+            .Where(c => c.No == no & c.Password == pass)
+            .ToList();
 
             if (student == null)
             {
-
                 return NotFound();
             }
-            var request = WebRequest.Create("https://onesignal.com/api/v1/notifications") as HttpWebRequest;
 
-            request.KeepAlive = true;
-            request.Method = "POST";
-            request.ContentType = "application/json; charset=utf-8";
-
-            request.Headers.Add("authorization", "Basic MjFmODNlZTYtMjI4NS00MmNmLTg5MzQtNGI1NTg2ODdhOTgy");
-
-            byte[] byteArray = Encoding.UTF8.GetBytes("{"
-                                                    + "\"app_id\": \"d341be2b-7348-4823-ac1a-422431b33af8\","
-                                                    + "\"contents\": {\"en\": \"English Message\"},"
-                                                    + "\"included_segments\": [\"All\"]}");
-
-            string responseContent = null;
-
-            try
-            {
-                using (var writer = request.GetRequestStream())
-                {
-                    writer.Write(byteArray, 0, byteArray.Length);
-                }
-
-                using (var response = request.GetResponse() as HttpWebResponse)
-                {
-                    using (var reader = new StreamReader(response.GetResponseStream()))
-                    {
-                        responseContent = reader.ReadToEnd();
-                    }
-                }
-            }
-            catch (WebException ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
-                System.Diagnostics.Debug.WriteLine(new StreamReader(ex.Response.GetResponseStream()).ReadToEnd());
-            }
-
-            System.Diagnostics.Debug.WriteLine(responseContent);
+           
             return student;
             
         }

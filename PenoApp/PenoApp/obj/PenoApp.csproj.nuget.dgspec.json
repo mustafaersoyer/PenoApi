@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tahircan\\Desktop\\PenoApionGit\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj": {}
+    "C:\\Users\\musta\\Documents\\GitHub\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tahircan\\Desktop\\PenoApionGit\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj": {
+    "C:\\Users\\musta\\Documents\\GitHub\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tahircan\\Desktop\\PenoApionGit\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj",
+        "projectUniqueName": "C:\\Users\\musta\\Documents\\GitHub\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj",
         "projectName": "PenoApp",
-        "projectPath": "C:\\Users\\tahircan\\Desktop\\PenoApionGit\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj",
-        "packagesPath": "C:\\Users\\tahircan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tahircan\\Desktop\\PenoApionGit\\PenoApi\\PenoApp\\PenoApp\\obj\\",
+        "projectPath": "C:\\Users\\musta\\Documents\\GitHub\\PenoApi\\PenoApp\\PenoApp\\PenoApp.csproj",
+        "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\musta\\Documents\\GitHub\\PenoApi\\PenoApp\\PenoApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tahircan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\musta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

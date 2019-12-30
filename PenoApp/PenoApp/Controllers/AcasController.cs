@@ -13,7 +13,7 @@ using System.Text;
 
 namespace PenoApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class AcasController : Controller
     {
         private readonly PenoContext _context = new PenoContext();
@@ -27,7 +27,7 @@ namespace PenoApp.Controllers
         }
 
         // GET: api/Acas/5
-        [HttpGet("{id}")]
+      /*  [HttpGet("{id}")]
         public async Task<ActionResult<Aca>> GetAca(int id)
         {
             var aca = await _context.Acas.FindAsync(id);
@@ -38,39 +38,20 @@ namespace PenoApp.Controllers
             }
 
             return aca;
-        }
+        }*/
 
         // GET api/<controller>/login?no=asdsa&pass=asd
-        [HttpGet("login")]
-        public async Task<ActionResult<Aca>> Get(int no, string pass)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Aca>>> AcLogin(int no, string pass)
         {
             var aca = _context.Acas
-            .SingleOrDefault(c => c.No == no & c.Password == pass);
+                .Where(c => c.No == no & c.Password == pass)
+            .ToList();
 
             if (aca == null)
             {
                 return NotFound();
             }
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             return aca;
 
         }

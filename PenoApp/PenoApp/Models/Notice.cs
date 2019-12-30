@@ -8,6 +8,7 @@ namespace PenoApp.Models
     public class Notice
     {
         public int Id { get; set; }
+        public String title { get; set; }
         public String content { get; set; }
         public int LectureId { get; set; }
     }
